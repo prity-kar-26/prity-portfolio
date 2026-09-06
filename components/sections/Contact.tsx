@@ -102,7 +102,6 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1fr] lg:gap-16">
                     {/* Left column: intro + contact links */}
-                    {/* Left column: intro + contact links */}
                     <motion.div
                         initial="hidden"
                         whileInView="show"
