@@ -29,10 +29,10 @@ export default function Navbar() {
             <nav className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10 lg:px-16 xl:px-24">
                 <button
                     onClick={() => handleLinkClick("home")}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-accent font-heading text-sm font-semibold text-background transition-transform hover:scale-105"
+                    className="font-heading text-xl font-semibold text-accent transition-transform hover:scale-105"
                     aria-label="Go to home"
                 >
-                    PK
+                    Prity Karmakar
                 </button>
 
                 {/* Desktop links */}

@@ -59,7 +59,7 @@ export default function Contact() {
 
     const onSubmit = async (data: ContactFormData) => {
         // Swap this URL for your own Formspree/EmailJS endpoint
-        await fetch("https://formspree.io/f/yourFormId", {
+        await fetch("https://formspree.io/f/moeqnbaj", {
             method: "POST",
             headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify(data),
@@ -96,13 +96,12 @@ export default function Contact() {
                         Let&apos;s Work Together
                     </h2>
                     <p className="mt-4 max-w-lg text-base text-foreground/80">
-                        Have an opportunity or just want to say hi? My inbox is always
-                        open.
+                        Have an opportunity? My inbox is always open.
                     </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1fr] lg:gap-16">
-                    {/* Contact links */}
+                    {/* Left column: intro + contact links */}
                     {/* Left column: intro + contact links */}
                     <motion.div
                         initial="hidden"
@@ -115,36 +114,49 @@ export default function Contact() {
                             variants={fadeUp}
                             className="text-base leading-relaxed text-foreground/80 sm:text-lg"
                         >
-                            Whether you have a role in mind, a project you&apos;d like to
-                            discuss, or just want to connect — I&apos;d love to hear from you.
-                            Reach out directly through any of these, or use the form.
+                            I&apos;m currently exploring new full-stack opportunities.
+                            If you&apos;re hiring or collaborating — reach out directly through any of these, or use the form.
                         </motion.p>
 
-                        <div className="flex flex-col gap-5">
-                            {CONTACT_LINKS.map((link) => (
-                                <motion.a
-                                    key={link.label}
-                                    href={link.href}
-                                    target={link.label !== "Email" ? "_blank" : undefined}
-                                    rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
-                                    variants={fadeUp}
-                                    whileHover={{ y: -4 }}
-                                    className="flex items-center gap-4 rounded-2xl border border-accent/20 bg-surface p-5 shadow-sm transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/20"
-                                >
-                                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-background text-xl text-accent">
-                                        <link.icon />
-                                    </span>
-                                    <div>
-                                        <p className="text-xs font-semibold uppercase tracking-wide text-muted">
-                                            {link.label}
-                                        </p>
-                                        <p className="mt-0.5 font-medium text-foreground">
-                                            {link.value}
-                                        </p>
-                                    </div>
-                                </motion.a>
-                            ))}
-                        </div>
+                        {/* Email, LinkedIn, GitHub — same row */}
+                        <motion.div variants={fadeUp} className="flex items-center gap-4">
+                            <a
+                                href="https://www.linkedin.com/in/prity-k-75a808222/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-surface text-2xl text-accent shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-accent/20"
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+
+                                href="https://github.com/prity-kar-26"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-surface text-2xl text-accent shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-accent/20"
+                            >
+                                <SiGithub />
+                            </a>
+                            <a
+                                href="mailto:pritykar26@gmail.com"
+                                className="flex flex-1 items-center gap-4 rounded-2xl border border-accent/20 bg-surface p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-accent/20"
+                            >
+                                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-background text-xl text-accent">
+                                    <HiOutlineMail />
+                                </span>
+                                <div>
+                                    <p className="text-xs font-semibold uppercase tracking-wide text-muted">
+                                        Email
+                                    </p>
+                                    <p className="mt-0.5 font-medium text-foreground">
+                                        pritykar26@gmail.com
+                                    </p>
+                                </div>
+                            </a>
+
+                        </motion.div>
 
                         <motion.div
                             variants={fadeUp}
@@ -152,8 +164,7 @@ export default function Contact() {
                         >
                             <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-green-500" />
                             <p className="text-sm text-foreground/80">
-                                Currently open to new opportunities — usually responds within a
-                                day.
+                                Currently open to new opportunities — immediate availability for full-time roles.
                             </p>
                         </motion.div>
                     </motion.div>
@@ -232,8 +243,8 @@ export default function Contact() {
                             </p>
                         )}
                     </motion.form>
-                </div>
-            </div>
-        </section>
+                </div >
+            </div >
+        </section >
     );
 }

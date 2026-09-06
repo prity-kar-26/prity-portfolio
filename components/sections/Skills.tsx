@@ -28,7 +28,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="relative overflow-hidden px-6 py-5 sm:px-10 lg:px-16 xl:px-24"
+            className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16 xl:px-24"
         >
             <div
                 aria-hidden

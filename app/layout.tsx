@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -25,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen font-body antialiased">{children}</body>
+      <body className="min-h-screen font-body antialiased">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

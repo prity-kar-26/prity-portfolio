@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AboutBioTabs from "../ui/AboutBioTabs";
 
 const HIGHLIGHTS = [
     {
@@ -26,7 +27,7 @@ const HIGHLIGHTS = [
 ];
 
 const JOURNEY = [
-    { year: "2019 – 2023", label: "B.Tech in IT", sub: "RCC Institute of Information Technology, Kolkata" },
+    { year: "2019 – 2023", label: "B.Tech in Information Technology", sub: "RCC Institute of Information Technology, Kolkata" },
     { year: "2023 – Present", label: "Software Developer", sub: "Keross Research & Development" },
 ];
 
@@ -74,53 +75,14 @@ export default function About() {
                 <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
                     {/* Left column: Bio + Journey */}
                     <div className="flex flex-col gap-12">
-                        <motion.div
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.3 }}
-                            variants={fadeUp}
-                            className="flex flex-col gap-5 text-base leading-relaxed text-foreground/80 sm:text-lg"
-                        >
-                            <p>
-                                I completed my B.Tech in Information Technology from RCC
-                                Institute of Information Technology, Kolkata. My full-stack
-                                journey properly began when I joined Keross Research and
-                                Development as a Software Engineer Trainee — that&apos;s
-                                where I got hands-on with real production systems for the
-                                first time.
-                            </p>
-                            <p>
-                                Over the past 3+ years, I&apos;ve grown into a Software
-                                Developer Level-1 role, working across the entire stack —
-                                React and Next.js on the frontend, Node.js and Express on
-                                the backend, and MongoDB and PostgreSQL with Prisma for
-                                data. I&apos;ve also worked on AI-powered workflow
-                                automation using n8n and the OpenAI API to cut down manual
-                                effort in real client systems.
-                            </p>
-                            <p>
-                                Alongside core development, I have working knowledge of
-                                containerization and deployment workflows — Docker,
-                                Kubernetes, and CI/CD pipelines — that support taking an
-                                application from code to a reliable, production-ready
-                                release.
-                            </p>
-                            <p>
-                                I enjoy owning problems end-to-end — from the first schema
-                                decision to the last pixel of a shipped UI — and I&apos;m
-                                always looking to bring that ownership mindset to solving
-                                real business problems.
-                            </p>
-                        </motion.div>
-
-                        {/* Journey — now inside the left column */}
+                        <AboutBioTabs />
                         {/* Journey — now inside the left column */}
                         <motion.div
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.3 }}
                             variants={staggerContainer}
-                            className="grid grid-cols-2 gap-6 border-t border-accent/15 pt-8"
+                            className="flex flex-col gap-6 border-t border-accent/15 pt-8"
                         >
                             {JOURNEY.map((step) => (
                                 <motion.div

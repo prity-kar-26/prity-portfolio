@@ -34,7 +34,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden px-6 py-12 sm:px-10 lg:px-16 xl:px-24"
+            className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden px-6 py-24 sm:px-10 lg:px-16 xl:px-24"
         >
             {/* Ambient glow blobs */}
             <div
@@ -66,26 +66,26 @@ export default function Hero() {
                         className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
                     >
                         Hi, I&apos;m{" "}
-                        <span className="text-accent">Prity Karmakar</span>
+                        <span className="text-accent">Prity</span>
                     </motion.h1>
 
                     <motion.p
                         variants={item}
                         className="mt-4 text-lg font-medium text-muted sm:text-xl"
                     >
-                        Full-Stack Developer (MERN) · Software Developer Level-1
+                        Full-Stack Developer (MERN)
                     </motion.p>
 
                     <motion.p
                         variants={item}
                         className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg"
                     >
-                        I design, build, and ship scalable web applications end-to-end —
-                        from database architecture to polished, production-ready
-                        interfaces. Over 3+ years at Keross R&amp;D, I&apos;ve worked
-                        across the MERN stack and Next.js, building everything from a
-                        live GRC compliance platform to AI-powered workflow automations
-                        that solve real business problems.
+                        I&apos;m a B.Tech graduate in Information Technology, currently working
+                        as a Software Developer Level-1 at Keross R&amp;D. Over 3+ years,
+                        I&apos;ve built and shipped scalable web applications end-to-end — from
+                        database architecture to polished, production-ready interfaces —
+                        working across the MERN stack, Next.js, n8n, and AI-powered workflow
+                        automation.
                     </motion.p>
 
                     <motion.div
@@ -100,67 +100,67 @@ export default function Hero() {
                             <span className="transition-transform group-hover:translate-x-1">→</span>
                         </button>
 
-                    <a
-                        href="/Prity_Karmakar_Resume.pdf"
-                        download
-                        className="group inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-accent hover:bg-surface"
-                    >
-                        <span aria-hidden className="transition-transform group-hover:-translate-y-0.5">
-                            ⬇
-                        </span>
-                        Download CV
-                    </a>
+                        <a
+                            href="/Prity_Karmakar_Resume.pdf"
+                            download
+                            className="group inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-accent hover:bg-surface"
+                        >
+                            <span aria-hidden className="transition-transform group-hover:-translate-y-0.5">
+                                ⬇
+                            </span>
+                            Download CV
+                        </a>
 
-                    <button
-                        onClick={() => scrollToSection("contact")}
-                        className="group inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-accent hover:bg-surface"
-                    >
-                        Let's Contact
-                        <span className="transition-transform group-hover:translate-x-1">→</span>
-                    </button>
-            </motion.div>
-
-            <motion.div
-                variants={item}
-                className="mt-14 grid w-full max-w-lg grid-cols-3 gap-6 border-t border-accent/15 pt-7"
-            >
-                {STATS.map((stat) => (
-                    <motion.div
-                        key={stat.label}
-                        whileHover={{ y: -4 }}
-                        className="flex flex-col items-center text-center sm:items-start sm:text-left"
-                    >
-                        <span className="text-xl">{stat.icon}</span>
-                        <p className="mt-1 font-heading text-3xl font-semibold text-accent">
-                            {stat.value}
-                        </p>
-                        <p className="mt-1 text-xs text-muted sm:text-sm">
-                            {stat.label}
-                        </p>
+                        <button
+                            onClick={() => scrollToSection("contact")}
+                            className="group inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-accent hover:bg-surface"
+                        >
+                            Let's Contact
+                            <span className="transition-transform group-hover:translate-x-1">→</span>
+                        </button>
                     </motion.div>
-                ))}
-            </motion.div>
-        </div>
 
-                {/* Photo — large portrait, glowing border, floating badge */ }
-    <motion.div
-        variants={item}
-        className="order-1 mx-auto md:order-2 md:ml-auto"
-    >
-        <div className="relative w-full max-w-md">
-            <Image
-                src="/images/profile.jpeg"
-                alt="Prity Karmakar"
-                width={420}
-                height={560}
-                className="w-full rounded-[2.25rem] border-4 border-accent object-cover shadow-2xl shadow-black/20 transition-shadow duration-500 hover:shadow-2xl hover:shadow-accent/50"
-                priority
-            />
-        </div>
-    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="mt-14 grid w-full max-w-lg grid-cols-3 gap-6 border-t border-accent/15 pt-7"
+                    >
+                        {STATS.map((stat) => (
+                            <motion.div
+                                key={stat.label}
+                                whileHover={{ y: -4 }}
+                                className="flex flex-col items-center text-center sm:items-start sm:text-left"
+                            >
+                                <span className="text-xl">{stat.icon}</span>
+                                <p className="mt-1 font-heading text-3xl font-semibold text-accent">
+                                    {stat.value}
+                                </p>
+                                <p className="mt-1 text-xs text-muted sm:text-sm">
+                                    {stat.label}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
 
-    {/* Photo — large portrait, glowing border */ }
-    {/* <motion.div
+                {/* Photo — large portrait, glowing border, floating badge */}
+                <motion.div
+                    variants={item}
+                    className="order-1 mx-auto md:order-2 md:ml-auto"
+                >
+                    <div className="relative w-full max-w-md">
+                        <Image
+                            src="/images/profile.jpeg"
+                            alt="Prity Karmakar"
+                            width={420}
+                            height={560}
+                            className="w-full rounded-[2.25rem] border-4 border-accent object-cover shadow-2xl shadow-black/20 transition-shadow duration-500 hover:shadow-2xl hover:shadow-accent/50"
+                            priority
+                        />
+                    </div>
+                </motion.div>
+
+                {/* Photo — large portrait, glowing border */}
+                {/* <motion.div
                     variants={item}
                     className="order-1 w-full max-w-sm md:order-2 md:ml-auto"
                 >
@@ -185,14 +185,14 @@ export default function Hero() {
 
             </motion.div >
 
-        <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-xs text-muted lg:flex"
-        >
-            Scroll
-            <span>↓</span>
-        </motion.div>
+            <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-xs text-muted lg:flex"
+            >
+                Scroll
+                <span>↓</span>
+            </motion.div>
         </section >
     );
 }

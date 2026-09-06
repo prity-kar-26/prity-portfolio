@@ -20,3 +20,9 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
 }
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
