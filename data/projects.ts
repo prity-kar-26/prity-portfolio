@@ -10,7 +10,7 @@ export const PROJECTS = [
         icon: "🩺",
         title: "DocFinder",
         subtitle: "Doctor Appointment Booking Platform",
-        desc: "Patients book doctors by specialty and location, while each center gets a full overview — managing doctors, availability, bookings, and earnings from one dashboard.",
+        desc: "Multi-tenant doctor appointment booking platform supporting patient and doctor/center workflows, doctor search, availability management, appointment booking, analytics, and payment tracking.",
         tech: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma"],
     },
     {
